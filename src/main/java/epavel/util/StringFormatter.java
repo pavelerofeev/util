@@ -25,6 +25,10 @@
 package epavel.util;
 
 
+import java.io.PrintWriter;
+import java.io.StringWriter;
+
+
 /**
  * String formatter. Replaces {@code {} } elements in the template with parameters.
  *
@@ -46,5 +50,11 @@ public final class StringFormatter {
         }
         sb.append(template.substring(k));
         return sb.toString();
+    }
+
+    public static String stackTrace(Throwable throwable) {
+        StringWriter sw = new StringWriter();
+        throwable.printStackTrace(new PrintWriter(sw));
+        return sw.toString();
     }
 }
