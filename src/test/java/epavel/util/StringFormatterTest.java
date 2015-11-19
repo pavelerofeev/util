@@ -40,5 +40,7 @@ public class StringFormatterTest {
         assertEquals("text with many params", $("text {} many {}", "with", "params"));
         assertEquals("1", $("{}", 1, 2, 3));
         assertEquals("nothing {}", $("nothing {}"));
+        assertEquals("no params", $("no params"));
+        assertEquals("no params", $("no params", "again", 1));
     }
 }
