@@ -60,4 +60,8 @@ public final class T2<A, B> implements Serializable {
     public int hashCode() {
         return Objects.hash(a, b);
     }
+
+    public String toString() {
+        return "{" + a + ',' + b + '}';
+    }
 }

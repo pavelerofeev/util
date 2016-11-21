@@ -62,4 +62,8 @@ public final class T3<A, B, C> implements Serializable {
     public int hashCode() {
         return Objects.hash(a, b, c);
     }
+
+    public String toString() {
+        return "{" + a + ',' + b + ',' + c + '}';
+    }
 }
